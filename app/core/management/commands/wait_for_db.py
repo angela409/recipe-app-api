@@ -1,10 +1,7 @@
 """
 Djnago command to wait for the database to be available
 """
-from asyncio import FastChildWatcher
-from email.policy import default
-from http.client import ImproperConnectionState
-from lib2to3.pgen2.token import OP
+
 from django.core.management.base import BaseCommand
 from psycopg2 import OperationalError as Psycopg2OpError
 from django.db.utils import OperationalError
