@@ -30,4 +30,4 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects: UserManager()
 
-    USERNAME_FIELD = 'email'  # defines the field that we want to use for authentication #noqa
+    USERNAME_FIELD = 'email'
