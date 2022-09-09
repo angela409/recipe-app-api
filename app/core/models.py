@@ -20,6 +20,10 @@ class UserManager(BaseUserManager):
 
         return user
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4389094 (Create User Model)
 class User(AbstractBaseUser, PermissionsMixin):
     """User in the system."""
     email = models.EmailField(max_length=255, unique=True)
@@ -29,4 +33,9 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     objects: UserManager()
 
+<<<<<<< HEAD
     USERNAME_FIELD = 'email' #defines the field that we want to use for authentication
+=======
+    USERNAME_FIELD = 'email'   # defines the field that we want
+                               # to use for authentication  # noqa
+>>>>>>> 4389094 (Create User Model)
