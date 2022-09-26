@@ -10,9 +10,11 @@ from rest_framework import status
 
 CREATE_USER_URL = reverse('user:create')
 
+
 def create_user(**params):
     """Create and return a new user."""
     return get_user_model().objects.create_user(**params)
+
 
 class PublicUserApiTest(TestCase):
     """Test the public features of the user API."""
@@ -23,9 +25,9 @@ class PublicUserApiTest(TestCase):
     def test_create_user_success(self):
         """Test creating a user is successful."""
         payload = {
-            'email' : 'test@example.com',
-            'password' : 'testpass123',
-            'name' : 'Test Name',
+            'email': 'test@example.com',
+            'password': 'testpass123',
+            'name': 'Test Name',
         }
         res = self.client.post(CREATE_USER_URL, payload)
 
